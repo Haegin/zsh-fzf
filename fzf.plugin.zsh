@@ -1,7 +1,7 @@
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-if [ -z "${HOMEBREW_PREFIX+x}" ]; then
+if [ -n "${HOMEBREW_PREFIX}" ]; then
   [[ $- == *i* ]] && source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh" 2> /dev/null
 
   source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh"
